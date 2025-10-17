@@ -50,6 +50,13 @@ Notes:
 - `tailwind.config.cjs`, `postcss.config.cjs`, `vite.config.js` – build config
 - `plan/` – planning documents
 
+## Deployment notes (GitHub Pages + custom domain)
+
+- The workflow in `.github/workflows/deploy-pages.yml` builds and publishes `dist/`.
+- `vite.config.js` sets `base: '/'` for a custom domain.
+- Custom domain is configured via `public/CNAME` (katyandsteveswedding.com).
+- In GitHub repo settings → Pages, set Source = GitHub Actions and add the custom domain.
+
 ## Next ideas (optional)
 
 - Captions and tags (hover overlay + filter controls)
