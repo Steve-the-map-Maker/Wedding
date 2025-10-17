@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { font-family: theme('fontFamily.sans'); background-color: #FFF8DC; }
+
+@layer utilities {
+  .section-padding { @apply py-20 md:py-24 px-6 md:px-8; }
+  .break-inside-avoid { break-inside: avoid; }
+}

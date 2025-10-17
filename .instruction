@@ -1,0 +1,1 @@
+See plan/plan_1.md for master directives. Project root now contains build (migrated from previous nested folder). Update any CI/deployment to reference root package.json.

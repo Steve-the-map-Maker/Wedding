@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "optimize-images",
+			"type": "shell",
+			"command": "npm run images:optimize",
+			"args": [],
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
