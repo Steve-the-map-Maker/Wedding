@@ -17,8 +17,9 @@ export default function PhotoGallery() {
 	const [index, setIndex] = useState(null);
 	const [active, setActive] = useState(null);
 
-	useEffect(() => {
-		fetch('/gallery/index.json')
+		useEffect(() => {
+			const base = import.meta.env.BASE_URL || '/';
+			fetch(`${base}gallery/index.json`)
 			.then(r => r.json())
 			.then(setIndex)
 			.catch(() => setIndex({}));
@@ -29,7 +30,7 @@ export default function PhotoGallery() {
 		return Object.entries(index).map(([id, list]) => ({ id, ...toSrcSets(list, id) }));
 	}, [index]);
 
-	return (
+		return (
 		<div className="mx-auto max-w-6xl">
 			<h2 className="font-display text-3xl md:text-4xl text-plum-purple mb-8 text-center">Gallery</h2>
 			{!items.length ? (

@@ -9,8 +9,9 @@ import ParallaxDivider from './components/ParallaxDivider.jsx';
 import Footer from './components/Footer.jsx';
 
 // Images (optimized outputs in public/gallery)
-const couplePhotoUrl = '/gallery/sandeaigo-1800.webp';
-const beach = '/gallery/LA-1800.webp';
+const BASE = import.meta.env.BASE_URL || '/';
+const couplePhotoUrl = `${BASE}gallery/sandeaigo-1800.webp`;
+const beach = `${BASE}gallery/LA-1800.webp`;
 
 export default function App() {
   return (
